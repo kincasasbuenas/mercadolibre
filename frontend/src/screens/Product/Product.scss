@@ -1,0 +1,91 @@
+@import '../../styles/base/variables';
+
+
+.product__container {
+    padding: $spacing-48;
+    background-color: $white-color;
+
+    .product-body {
+        display: flex;
+        flex-flow: row nowrap;
+
+        .product-image {
+            position: relative;
+            width: 80%;
+            text-align: center;
+        }
+
+        .product-resume {
+            padding: $spacing-32;
+            max-width:  320px;
+            p small {
+                padding: 0 4px;
+            }
+
+            .product-title {
+                margin: $spacing-16 0 $spacing-32;
+                font-size: 24px;
+            }
+
+            .product-price {
+                font-size: 46px;
+                margin: $spacing-32 0;
+
+                .extra:before {
+                    content: '.';
+                }
+            }
+
+            .product-add-to-cart {
+                font-size: 20px;
+                border-radius: 4px;
+                background: $blue-color;
+                padding: 20px;
+
+                border: 0;
+                color: $white-color;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .product-description {
+        width: 70%;
+
+        .label {
+            padding: $spacing-8 0;
+            font-size: 28px;
+        }
+
+        .description {
+            font-size: $spacing-16;
+            padding-bottom: $spacing-32;
+            color: $gray-color;
+        }
+    }
+
+}
+
+@media (max-width: $screen__m) {
+
+    body .product__container{
+        .product-body {
+            flex-flow: column nowrap;
+            
+            .product-image{
+                width: 100%;
+            }
+
+            .product-resume{
+                max-width: 100%;
+            }
+        }
+
+        .product-description{
+            width: 100%;
+            padding: $spacing-32;
+            box-sizing: border-box;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../styles/base/variables';
+
+.breadcrumb {
+    position: relative;
+    width: 100%;
+    padding: $spacing-16 0;
+    color: $gray-color;
+    background-color: $bg-color;
+
+    &__anchor {
+        padding: 7px;
+    }
+
+    .category-item {
+
+        &:after {
+            content: "  > "
+        }
+
+        &:last-child{
+            font-weight: bold;
+            &:after {
+                content: '';
+            }
+        }
+    }
+}

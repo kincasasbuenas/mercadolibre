@@ -1,0 +1,12 @@
+@import '../../styles/base/variables';
+
+.products__list {
+  background-color: $white-color;
+
+  .list_items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+  }
+
+}

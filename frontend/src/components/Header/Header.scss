@@ -1,0 +1,41 @@
+@import '../../styles/base/variables';
+
+@mixin centerer {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: $primary-color;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    +* {
+        margin-top: $spacing-16;
+    }
+
+    &__logo {
+        padding-top: $spacing-8;
+        padding-right: 34px;
+    }
+
+    &__container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        @include centerer;
+    }
+}
+
+.centered -color {
+    @include centerer;
+}
